@@ -9,7 +9,7 @@ if(isset($_POST["submit_button"])) {
 require 'message-body.php';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
-define('SENDER', 'no-reply@homesteadheath.com');
+define('SENDER', 'sales@homesteadheath.com');
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
 define('RECIPIENT', $_POST["email"]);
