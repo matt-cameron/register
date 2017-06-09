@@ -153,6 +153,7 @@ $message =
           border-bottom-right-radius: 4px;
           border-bottom-left-radius: 4px;
         }
+
     </style>
 
     <!-- Progressive Enhancements -->
@@ -181,7 +182,7 @@ $message =
         }
 
     </style>
-
+    <script src="https://use.fontawesome.com/6a7c22773f.js"></script>
     <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
     <!--[if gte mso 9]>
     <xml>
@@ -239,9 +240,9 @@ $message =
                                     <br>
                                     <div class="well">
                                       <ul class="list-group">
-                                        <li class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Matt Cameron</li>
-                                        <li class="list-group-item"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Cameron LLC</li>
-                                        <li class="list-group-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> matt@mtmc.ca</li>
+                                        <li class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i> Matt Cameron</li>
+                                        <li class="list-group-item"><i class="fa fa-building" aria-hidden="true"></i> Cameron LLC</li>
+                                        <li class="list-group-item"><i class="fa fa-envelope" aria-hidden="true"></i> matt@mtmc.ca</li>
                                       </ul>
 
                                     </div>
@@ -322,8 +323,6 @@ $message =
     </center>
 </body>
 </html>
-
-
 
 ';
 // Replace sender@example.com with your "From" address.
