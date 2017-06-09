@@ -26,7 +26,6 @@ define('PORT', '587');
 
 // Other message information
 define('SUBJECT','Homestead Heath - New Account Registration');
-define('BODY','New Account Registration' ."\n" .$message );
 
 require_once 'Mail.php';
 
@@ -47,7 +46,7 @@ $smtpParams = array (
 $mail = Mail::factory('smtp', $smtpParams);
 
 // Send the email.
-$result = $mail->send(RECIPIENT, $headers, BODY);
+$result = $mail->send(RECIPIENT, $headers, $message);
 
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
