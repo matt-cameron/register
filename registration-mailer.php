@@ -24,7 +24,7 @@ define('PORT', '587');
 
 // Other message information
 define('SUBJECT','Homestead Heath - New Account Registration');
-define('BODY','New Account Registration' .$_POST["fname"]);
+define('BODY','New Account Registration' ."\n" .$_POST["fname"] ."\n" .$_POST["lname"] ."\n" .$_POST["company"] ."\n" .$_POST["email"]);
 
 require_once 'Mail.php';
 
