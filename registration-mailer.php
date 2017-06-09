@@ -18,8 +18,12 @@ $to = array(
     ),
   );
 
+  $destination = CFComplexType::map(array(
+      'ToAddresses' => $to,
+    ));
 
-define('RECIPIENT', $reciparray );
+
+define('RECIPIENT', $destination );
 
 
 
