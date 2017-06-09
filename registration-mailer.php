@@ -12,7 +12,10 @@ require 'message-body.php';
 define('SENDER', 'no-reply@homesteadheath.com');
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-$recips = array('matt@mtmc.ca', 'nayrthomas@gmail.com');
+$recips = array(
+      0 => 'John Doe <matt@mtmc.ca>',
+      1 => 'Jane Doe <nayrthomas@gmail.com>',
+);
 
 define('RECIPIENT', $recips );
 
