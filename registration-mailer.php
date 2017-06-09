@@ -1,6 +1,6 @@
 <?php
 $message =
-'' .$_POST["fname"]; .''
+'' .$_POST["fname"] .''
 ;
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
