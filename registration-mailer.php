@@ -1,5 +1,7 @@
 <?php
-
+$message = '
+  <p>.$_POST["fname"] ."\n" .$_POST["lname"] ."\n" .$_POST["company"] ."\n" .$_POST["email"]</p>
+';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 define('SENDER', 'no-reply@homesteadheath.com');
@@ -24,7 +26,7 @@ define('PORT', '587');
 
 // Other message information
 define('SUBJECT','Homestead Heath - New Account Registration');
-define('BODY','New Account Registration' ."\n" .$_POST["fname"] ."\n" .$_POST["lname"] ."\n" .$_POST["company"] ."\n" .$_POST["email"]);
+define('BODY','New Account Registration' ."\n" .$message );
 
 require_once 'Mail.php';
 
