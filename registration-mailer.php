@@ -23,7 +23,7 @@ $to = array(
     ));
 
 
-define('RECIPIENT', $destination );
+
 
 
 
