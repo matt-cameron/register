@@ -2,6 +2,7 @@
 <html>
 
 <head>
+<meta http-equiv="refresh" content="3;url=http://www.google.com/" />
 <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 <meta charset="utf-8"/>
 <title>Account Registration</title>
