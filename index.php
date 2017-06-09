@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+require 'registration-mailer.php';
+?>
 <html>
 
 <head>
@@ -61,7 +64,7 @@ After completing this form an account manager will contact you with a username a
 <div class="col-sm-6">
 <div class="form-group form-group-default">
 <label>First Name</label>
-<input type="text" name="fname" placeholder="John" class="form-control" required>
+<input type="text" name="fname" placeholder="Jane" class="form-control" required>
 </div>
 </div>
 <div class="col-sm-6">
