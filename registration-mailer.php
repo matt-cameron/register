@@ -197,12 +197,6 @@ $message =
 <body width="100%" bgcolor="#fafafa" style="margin: 0; mso-line-height-rule: exactly;">
     <center style="width: 100%; background: #fafafa; text-align: left;">
 
-        <!-- Visually Hidden Preheader Text : BEGIN -->
-        <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
-            (Optional) This text will appear in the inbox preview, but not the email body.
-        </div>
-        <!-- Visually Hidden Preheader Text : END -->
-
         <!--
             Set the email width. Defined in two places:
             1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
@@ -240,7 +234,7 @@ $message =
                                     <br>
                                     <div class="well">
                                       <ul class="list-group">
-                                        <li class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i> Matt Cameron</li>
+                                        <li class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i>' .$_POST["fname"] .'</li>
                                         <li class="list-group-item"><i class="fa fa-building" aria-hidden="true"></i> Cameron LLC</li>
                                         <li class="list-group-item"><i class="fa fa-envelope" aria-hidden="true"></i> matt@mtmc.ca</li>
                                       </ul>
@@ -323,6 +317,7 @@ $message =
     </center>
 </body>
 </html>
+
 
 ';
 // Replace sender@example.com with your "From" address.
