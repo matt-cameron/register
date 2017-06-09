@@ -25,9 +25,9 @@ $to = array(
     ),
   );
 
-  $RECIPIENT = CFComplexType::map(array(
-    'ToAddresses' => $to,
-  ));
+RECIPIENT = CFComplexType::map(array(
+  'ToAddresses' => $to,
+));
 
 require '/var/registration_mailer/aws.php';
 
@@ -38,7 +38,7 @@ require_once 'Mail.php';
 
 $headers = array (
   'From' => SENDER,
-  'To' => $RECIPIENT,
+  'To' => RECIPIENT,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
 
@@ -54,7 +54,7 @@ $smtpParams = array (
 $mail = Mail::factory('smtp', $smtpParams);
 
 // Send the email.
-$result = $mail->send($RECIPIENT, $headers, $message);
+$result = $mail->send(RECIPIENT, $headers, $message);
 
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
