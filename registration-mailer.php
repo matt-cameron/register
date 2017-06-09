@@ -347,9 +347,7 @@ $result = $mail->send(RECIPIENT, $headers, $message);
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
-  echo '<script type="text/javascript">
-           window.location = "/registration/success.php"
-      </script>';
+  require 'success.php';
 }
 
 
