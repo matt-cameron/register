@@ -234,9 +234,9 @@ $message =
                                     <br>
                                     <div class="well">
                                       <ul class="list-group">
-                                        <li class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i>' .$_POST["fname"] .'</li>
-                                        <li class="list-group-item"><i class="fa fa-building" aria-hidden="true"></i> Cameron LLC</li>
-                                        <li class="list-group-item"><i class="fa fa-envelope" aria-hidden="true"></i> matt@mtmc.ca</li>
+                                        <li class="list-group-item"><i class="fa fa-user" aria-hidden="true"></i>' .$_POST["fname"] .$_POST["lname"] .'</li>
+                                        <li class="list-group-item"><i class="fa fa-building" aria-hidden="true"></i>' .$_POST["company"] .'</li>
+                                        <li class="list-group-item"><i class="fa fa-envelope" aria-hidden="true"></i>' .$_POST["email"] .'</li>
                                       </ul>
 
                                     </div>
@@ -317,6 +317,7 @@ $message =
     </center>
 </body>
 </html>
+
 
 
 ';
