@@ -56,7 +56,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
 After completing this form an account manager will contact you with a username and password. It may take one to two days to create your account.
 </small>
 </p>
-<form id="form-register" class="p-t-15" role="form" action="http://pages.revox.io/dashboard/latest/html/index.html">
+<form id="form-register" class="p-t-15" role="form" action="registration-mailer.php" method="post">
 <div class="row">
 <div class="col-sm-6">
 <div class="form-group form-group-default">
