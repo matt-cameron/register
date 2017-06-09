@@ -17,7 +17,7 @@ define('PASSWORD','Am/uZWH5lvXEVNXbMLbGRUglAK9jgOkzEA61QKfrZTAa');
 // If you're using Amazon SES in a region other than US West (Oregon),
 // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP
 // endpoint in the appropriate region.
-define('HOST', 'email-smtp.us-west-2.amazonaws.com');
+define('HOST', 'email-smtp.us-east-1.amazonaws.com');
 
  // The port you will connect to on the Amazon SES SMTP endpoint.
 define('PORT', '587');
@@ -49,7 +49,6 @@ $result = $mail->send(RECIPIENT, $headers, BODY);
 
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
-  echo $_GET["fname"];
 } else {
   echo("Email sent!"."\n");
 }
