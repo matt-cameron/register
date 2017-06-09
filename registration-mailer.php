@@ -1,6 +1,7 @@
 <?php
 $message =
-'<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+'<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -25,8 +26,6 @@ $message =
     <!--<![endif]-->
 
     <!-- Web Font / @font-face : END -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- CSS Reset -->
     <style>
 
@@ -111,7 +110,29 @@ $message =
                 min-width: 375px !important;
             }
         }
+        .well {
+          min-height: 20px;
+          padding: 19px;
+          margin-bottom: 20px;
+          background-color: @well-bg;
+          border: 1px solid @well-border;
+          border-radius: @border-radius-base;
+          .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+          blockquote {
+            border-color: #ddd;
+            border-color: rgba(0,0,0,.15);
+          }
+        }
 
+        // Sizes
+        .well-lg {
+          padding: 24px;
+          border-radius: @border-radius-large;
+        }
+        .well-sm {
+          padding: 9px;
+          border-radius: @border-radius-small;
+        }
     </style>
 
     <!-- Progressive Enhancements -->
@@ -280,8 +301,9 @@ $message =
 
     </center>
 </body>
-</html>'
-;
+</html>
+
+';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 define('SENDER', 'no-reply@homesteadheath.com');
