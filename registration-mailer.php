@@ -1,4 +1,12 @@
 <?php
+if(isset($_POST["submit_button"])) {
+    // Now check if the posted input element is empty, if empty stop by echo a error message
+    // Otherwhise continue executing script
+    if(empty($_POST["email"])) {
+        echo "You forgot to fill in this form-element.";
+
+    }else{
+        // Continue
 
 require 'message-body.php';
 
@@ -46,5 +54,7 @@ if (PEAR::isError($result)) {
   require 'success.php';
 }
 
+}
+}
 
 ?>
