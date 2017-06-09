@@ -14,6 +14,7 @@ define('SENDER', 'no-reply@homesteadheath.com');
 // is still in the sandbox, this address must be verified.
 define('RECIPIENT', $_POST["email"]);
 define('MATTC', 'matt@mtmc.ca');
+define('HHSALES', 'nayrthomas@gmail.com');
 
 require '/var/registration_mailer/aws.php';
 
@@ -25,11 +26,16 @@ $CustHeaders = array (
   'To' => RECIPIENT,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
-  $MattCHeaders = array (
-    'From' => SENDER,
-    'To' => MATTC,
-    'Subject' => SUBJECT,
-    'Content-type' => 'text/html');
+$MattCHeaders = array (
+  'From' => SENDER,
+  'To' => MATTC,
+  'Subject' => SUBJECT,
+  'Content-type' => 'text/html');
+$HHSalesHeaders = array (
+  'From' => SENDER,
+  'To' => HHSALES,
+  'Subject' => SUBJECT,
+  'Content-type' => 'text/html');
 
 $smtpParams = array (
   'host' => HOST,
@@ -38,15 +44,20 @@ $smtpParams = array (
   'username' => USERNAME,
   'password' => PASSWORD
 );
- // Create an SMTP client.
+ // Create an SMTP client for RECIPIENT
 $mail = Mail::factory('smtp', $smtpParams);
 // Send the email.
 $result = $mail->send(RECIPIENT, $CustHeaders, $message);
 
-// Create an SMTP client.
+// Create an SMTP client for MATTC.
 $mail = Mail::factory('smtp', $smtpParams);
 // Send the email.
 $result = $mail->send(MATTC, $MattCHeaders, $message);
+
+// Create an SMTP client for HHSALES.
+$mail = Mail::factory('smtp', $smtpParams);
+// Send the email.
+$result = $mail->send(HHSALES, $HHSalesHeaders, $message);
 
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
