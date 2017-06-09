@@ -51,7 +51,7 @@ if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
   echo '<script type="text/javascript">
-           window.location = "/success.php"
+           window.location = "/registration/success.php"
       </script>';
 }
 
