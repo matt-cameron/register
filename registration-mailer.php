@@ -50,7 +50,9 @@ $result = $mail->send(RECIPIENT, $headers, BODY);
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
-  echo("Email sent!");
+  echo '<script type="text/javascript">
+           window.location = "/success.php"
+      </script>';
 }
 
 ?>
