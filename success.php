@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<meta http-equiv="refresh" content="3;url=http://www.google.com/" />
+<meta http-equiv="refresh" content="5;url=https://homesteadheath.com/" />
 <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 <meta charset="utf-8"/>
 <title>Account Registration</title>
@@ -57,7 +57,7 @@ Please allow us one to two business days to create your account. We will contact
 </h4>
 </br>
 <p>
-  Return to <a href="https://homesteadheath.com"> Homesteadheath.com </a>
+  Returning to HomesteadHeath.com in <b>5</b> seconds. <p> Or click <a href="https://homesteadheath.com"> Homesteadheath.com </a> to return now. 
 </p>
 
 </div>
