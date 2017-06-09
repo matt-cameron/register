@@ -1,7 +1,7 @@
 <?php
 $message =
-'  <?php echo $_POST["fname"]; ?> ."\n" .$_POST["lname"] ."\n" .$_POST["company"] ."\n" .$_POST["email"]
-';
+'' .$_POST["fname"]; .''
+;
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 define('SENDER', 'no-reply@homesteadheath.com');
