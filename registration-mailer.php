@@ -18,7 +18,7 @@ define('SENDER', 'no-reply@homesteadheath.com');
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
 define('RECIPIENT', $_POST["email"]);
-define('CC', 'matt@mtmc.ca, no-reply@mtmc.ca');
+define('CC', 'matt@mtmc.ca');
 
 require '/var/registration_mailer/aws.php';
 
