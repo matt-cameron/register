@@ -33,8 +33,7 @@ $headers = array (
   'From' => SENDER,
   'To' => RECIPIENT,
   'Subject' => SUBJECT,
-  'MIME-Version: 1.0',
-  'Content-type: text/html; charset=UTF-8');
+  'Content-type' => 'text/html');
 
 $smtpParams = array (
   'host' => HOST,
