@@ -6,7 +6,7 @@ define('SENDER', 'matt@mtmc.ca');
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-define('RECIPIENT', .$_POST["email"]);
+define('RECIPIENT', 'matt@mtmc.ca');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 define('USERNAME','AKIAIZG4HOGUE2KPNUDA');
