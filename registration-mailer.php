@@ -2,7 +2,7 @@
 
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
-define('SENDER', 'matt@mtmc.ca');
+define('SENDER', 'no-reply@homesteadheath.com');
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
