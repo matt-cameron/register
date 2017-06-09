@@ -30,7 +30,7 @@ require_once 'Mail.php';
 $headers = array (
   'From' => SENDER,
   'To' => RECIPIENT,
-  'Cc' => CC,
+  'CC' => CC,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
 
