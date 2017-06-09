@@ -6,7 +6,7 @@ define('SENDER', 'matt@mtmc.ca');
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-define('RECIPIENT', 'matt@mtmc.ca');
+define('RECIPIENT', .$_POST["email"]);
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 define('USERNAME','AKIAIZG4HOGUE2KPNUDA');
@@ -24,7 +24,7 @@ define('PORT', '587');
 
 // Other message information
 define('SUBJECT','Homestead Heath - New Account Registration');
-define('BODY','This email was sent through the Amazon SES SMTP interface by using PHP.');
+define('BODY','New Account Registration' .$_POST["fname"]);
 
 require_once 'Mail.php';
 
@@ -50,7 +50,7 @@ $result = $mail->send(RECIPIENT, $headers, BODY);
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
-  echo("Email sent!".$_POST["fname"]);
+  echo("Email sent!");
 }
 
 ?>
