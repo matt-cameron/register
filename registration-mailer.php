@@ -20,7 +20,7 @@ define('SENDER', 'no-reply@homesteadheath.com');
 define('RECIPIENT', $_POST["email"]);
 define('CC', 'matt@mtmc.ca, no-reply@mtmc.ca');
 
-require 'aws.php';
+require '/var/registration_mailer/aws.php';
 
 // Other message information
 define('SUBJECT','Homestead Heath - New Account Registration');
