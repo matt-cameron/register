@@ -309,9 +309,11 @@ $message =
 // This address must be verified with Amazon SES.
 define('SENDER', 'no-reply@homesteadheath.com');
 
+
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
 define('RECIPIENT', $_POST["email"]);
+define('CC', 'matt@mtmc.ca');
 
 // Replace smtp_username with your Amazon SES SMTP user name.
 define('USERNAME','AKIAIZG4HOGUE2KPNUDA');
@@ -335,6 +337,7 @@ require_once 'Mail.php';
 $headers = array (
   'From' => SENDER,
   'To' => RECIPIENT,
+  'Cc' => CC,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
 
