@@ -97,7 +97,7 @@ After completing this form an account manager will contact you with a username a
 <a href="https://homesteadheath.com/contactus/" class="text-info small">Help? Contact Support</a>
 </div>
 </div>
-<button class="btn btn-primary btn-cons m-t-10" type="submit">Submit Information</button>
+<button class="btn btn-primary btn-cons m-t-10" name="submit_button" type="submit">Submit Information</button>
 </form>
 </div>
 </div>
