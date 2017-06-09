@@ -1,5 +1,8 @@
 <?php
 
+if(isset($_POST['fname'], $_POST['lname'], $_POST['email'])) {
+
+
 $message =
 '<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -361,6 +364,11 @@ if (PEAR::isError($result)) {
   echo '<script type="text/javascript">
            window.location = "/registration/success.php"
       </script>';
+}
+
+or die("Error!");
+header("Location: success");
+exit;
 }
 
 ?>
