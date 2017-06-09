@@ -1,3 +1,5 @@
+<?php
+
 // Replace smtp_username with your Amazon SES SMTP user name.
 define('USERNAME','AKIAIZG4HOGUE2KPNUDA');
 
@@ -11,3 +13,5 @@ define('HOST', 'email-smtp.us-east-1.amazonaws.com');
 
  // The port you will connect to on the Amazon SES SMTP endpoint.
 define('PORT', '587');
+
+?>
