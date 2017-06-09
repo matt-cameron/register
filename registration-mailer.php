@@ -17,8 +17,17 @@ define('SENDER', 'no-reply@homesteadheath.com');
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-define('RECIPIENT', $_POST["email"]);
-define('CC', 'matt@mtmc.ca');
+
+$to = array(
+    'member' => array(
+      0 => 'John Doe <matt@mtmc.ca>',
+      1 => 'Jane Doe <nayrthomas@gmail.com>',
+    ),
+  );
+
+  $RECIPIENT = CFComplexType::map(array(
+    'ToAddresses' => $to,
+  ));
 
 require '/var/registration_mailer/aws.php';
 
@@ -29,8 +38,7 @@ require_once 'Mail.php';
 
 $headers = array (
   'From' => SENDER,
-  'To' => RECIPIENT,
-  'CC' => CC,
+  'To' => $RECIPIENT,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
 
@@ -46,7 +54,7 @@ $smtpParams = array (
 $mail = Mail::factory('smtp', $smtpParams);
 
 // Send the email.
-$result = $mail->send(RECIPIENT, $headers, $message);
+$result = $mail->send($RECIPIENT, $headers, $message);
 
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
