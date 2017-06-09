@@ -18,9 +18,6 @@ $to = array(
     ),
   );
 
-  $reciparray = CFComplexType::map(array(
-    'ToAddresses' => $to,
-  ));
 
 define('RECIPIENT', $reciparray );
 
