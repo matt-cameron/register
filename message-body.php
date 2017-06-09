@@ -213,7 +213,7 @@ $message =
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <tr>
                     <td style="padding: 20px 0; text-align: center">
-                        <img src="https://homesteadheath.com/registration/assets/img/hh-logo1.png" aria-hidden="true" width="400" height="100" alt="alt_text" border="0" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                        <img src="https://homesteadheath.com/register/assets/img/hh-logo1.png" aria-hidden="true" width="400" height="100" alt="alt_text" border="0" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
                     </td>
                 </tr>
             </table>
