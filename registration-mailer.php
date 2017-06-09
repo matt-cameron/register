@@ -24,7 +24,6 @@ $to = array(
     'ToAddresses' => $to,
   ));
 
-define('RECIPIENT', $destination );
 
 
 
@@ -34,7 +33,7 @@ define('SUBJECT','Homestead Heath - New Account Registration');
 require_once 'Mail.php';
 $headers = array (
   'From' => SENDER,
-  'To' => RECIPIENT,
+  'To' => $RECIPIENT,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
 $smtpParams = array (
@@ -47,7 +46,7 @@ $smtpParams = array (
  // Create an SMTP client.
 $mail = Mail::factory('smtp', $smtpParams);
 // Send the email.
-$result = $mail->send(RECIPIENT, $headers, $message);
+$result = $mail->send($RECIPIENT, $headers, $message);
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
