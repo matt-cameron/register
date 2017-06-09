@@ -114,24 +114,23 @@ $message =
           min-height: 20px;
           padding: 19px;
           margin-bottom: 20px;
-          background-color: @well-bg;
-          border: 1px solid @well-border;
-          border-radius: @border-radius-base;
-          .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
-          blockquote {
-            border-color: #ddd;
-            border-color: rgba(0,0,0,.15);
-          }
+          background-color: #f5f5f5;
+          border: 1px solid #e3e3e3;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+                  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
         }
-
-        // Sizes
+        .well blockquote {
+          border-color: #ddd;
+          border-color: rgba(0, 0, 0, .15);
+        }
         .well-lg {
           padding: 24px;
-          border-radius: @border-radius-large;
+          border-radius: 6px;
         }
         .well-sm {
           padding: 9px;
-          border-radius: @border-radius-small;
+          border-radius: 3px;
         }
     </style>
 
@@ -302,6 +301,7 @@ $message =
     </center>
 </body>
 </html>
+
 
 ';
 // Replace sender@example.com with your "From" address.
