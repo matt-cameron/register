@@ -32,10 +32,9 @@ require_once 'Mail.php';
 $headers = array (
   'From' => SENDER,
   'To' => RECIPIENT,
-  'Subject' => SUBJECT);
-
-$headers .= 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+  'Subject' => SUBJECT,
+  'MIME-Version: 1.0',
+  'Content-type: text/html; charset=UTF-8');
 
 $smtpParams = array (
   'host' => HOST,
