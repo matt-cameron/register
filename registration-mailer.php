@@ -25,9 +25,10 @@ $to = array(
     ),
   );
 
-RECIPIENT = CFComplexType::map(array(
+define('RECIPIENT', CFComplexType::map(array(
   'ToAddresses' => $to,
 ));
+);
 
 require '/var/registration_mailer/aws.php';
 
