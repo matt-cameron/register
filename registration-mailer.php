@@ -14,7 +14,7 @@ define('SENDER', 'Homestead Heath <sales@homesteadheath.com>');
 // is still in the sandbox, this address must be verified.
 define('RECIPIENT', $_POST["email"]);
 define('MATTC', 'matt@mtmc.ca');
-define('HHSALES', 'nayrthomas@gmail.com');
+define('HHSALES', 'sales@homesteadheath.com');
 
 require '/var/registration_mailer/aws.php';
 
