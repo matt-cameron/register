@@ -6,36 +6,31 @@ if(isset($_POST["submit_button"])) {
         echo "You forgot to fill in this form-element.";
     }else{
         // Continue
-require 'vendor/autoload.php';
 require 'message-body.php';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 define('SENDER', 'no-reply@homesteadheath.com');
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-$to = array(
-    'member' => array(
-      0 => 'John Doe <matt@mtmc.ca>',
-      1 => 'Jane Doe <janedoe@example.com>',
-    ),
-  );
-
-  $destination = CFComplexType::map(array(
-    'ToAddresses' => $to,
-  ));
-
-
-
+define('RECIPIENT', $_POST["email"]);
+define('MATTC', 'matt@mtmc.ca');
 
 require '/var/registration_mailer/aws.php';
+
 // Other message information
 define('SUBJECT','Homestead Heath - New Account Registration');
 require_once 'Mail.php';
-$headers = array (
+$CustHeaders = array (
   'From' => SENDER,
-  'To' => $RECIPIENT,
+  'To' => RECIPIENT,
   'Subject' => SUBJECT,
   'Content-type' => 'text/html');
+  $MattCHeaders = array (
+    'From' => SENDER,
+    'To' => MATTC,
+    'Subject' => SUBJECT,
+    'Content-type' => 'text/html');
+
 $smtpParams = array (
   'host' => HOST,
   'port' => PORT,
@@ -46,7 +41,13 @@ $smtpParams = array (
  // Create an SMTP client.
 $mail = Mail::factory('smtp', $smtpParams);
 // Send the email.
-$result = $mail->send($RECIPIENT, $headers, $message);
+$result = $mail->send(RECIPIENT, $CustHeaders, $message);
+
+// Create an SMTP client.
+$mail = Mail::factory('smtp', $smtpParams);
+// Send the email.
+$result = $mail->send(MATTC, $MattCHeaders, $message);
+
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
