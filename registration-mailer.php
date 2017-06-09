@@ -6,18 +6,25 @@ if(isset($_POST["submit_button"])) {
         echo "You forgot to fill in this form-element.";
     }else{
         // Continue
+require 'vendor/autoload.php';
 require 'message-body.php';
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 define('SENDER', 'no-reply@homesteadheath.com');
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-$recips = array(
+$to = array(
+    'member' => array(
       0 => 'John Doe <matt@mtmc.ca>',
-      1 => 'Jane Doe <nayrthomas@gmail.com>',
-);
+      1 => 'Jane Doe <janedoe@example.com>',
+    ),
+  );
 
-define('RECIPIENT', $recips );
+  $destination = CFComplexType::map(array(
+    'ToAddresses' => $to,
+  ));
+
+define('RECIPIENT', $destination );
 
 
 
