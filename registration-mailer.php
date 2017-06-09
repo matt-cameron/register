@@ -240,31 +240,12 @@ $message =
                                       </ul>
 
                                     </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
-                                    <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 18px; line-height: 21px; color: #333333; font-weight: bold;">Received this message in error?</h2>
-                                    <p style="margin: 0;">If you belive you have received this message in error or if you need to make a change to the information you have submitted, please let us know by replying to this message or by contacting sales@homesteadheath.com </p>
+                                    <p>Made a mistake? Let us know by replying to this message.</p>
                                 </td>
                             </tr>
                         </table>
                     </td>
                 </tr>
-                <!-- 1 Column Text + Button : END -->
-
-
-
-                <!-- Clear Spacer : BEGIN -->
-                <tr>
-                    <td height="40" style="font-size: 0; line-height: 0;">
-                        &nbsp;
-                    </td>
-                </tr>
-                <!-- Clear Spacer : END -->
-
-
 
             <!-- Email Footer : BEGIN -->
             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
@@ -298,7 +279,7 @@ $message =
                         <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px; text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-                                    <p style="margin: 0;">This web service is managed and maintained by Matt Cameron. http://www.mtmc.ca</p>
+                                    <p style="margin: 0;">This web service is managed and maintained by Matt Cameron. www.mtmc.ca</p>
                                 </td>
                             </tr>
                         </table>
@@ -317,6 +298,7 @@ $message =
     </center>
 </body>
 </html>
+
 
 
 
