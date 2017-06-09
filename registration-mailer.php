@@ -23,7 +23,7 @@ define('HOST', 'email-smtp.us-east-1.amazonaws.com');
 define('PORT', '587');
 
 // Other message information
-define('SUBJECT','Amazon SES test (SMTP interface accessed using PHP)');
+define('SUBJECT','Homestead Heath - New Account Registration');
 define('BODY','This email was sent through the Amazon SES SMTP interface by using PHP.');
 
 require_once 'Mail.php';
@@ -50,7 +50,7 @@ $result = $mail->send(RECIPIENT, $headers, BODY);
 if (PEAR::isError($result)) {
   echo("Email not sent. " .$result->getMessage() ."\n");
 } else {
-  echo("Email sent!"."\n");
+  echo("Email sent!"."\n" $_GET["fname"]);
 }
 
 ?>
